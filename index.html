@@ -3,27 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - Refatorando</title>
+    <link rel="icon" href="https://cache.refatorando.com/wp-content/uploads/2023/05/Favicon_Refatorando-1-100x100.png" type="image/x-icon">
     <link rel="stylesheet" href="/public/css/styles.css">
 </head>
 <body>
     <div class="login-container">
-        <div class="login-container">
-            <div class="login-text">
-                <div class="login-text-content">
-                    <h2>Olá!<br>
-                        Seja bem-vindo(a) de volta.</h2>
-                    <p>Faça login para continuar acessando a página</p>
-                </div>
-            </div>
-            <div class="login-form">
-                <form>
-                    <h2>Login</h2>
-                    <input type="text" placeholder="Nome de usuário" required>
-                    <input type="password" placeholder="Senha" required>
-                    <button type="submit">Entrar</button>
-                </form>
+        <div class="login-text">
+            <div class="login-text-content">
+                <h2>Olá!<br>
+                    Seja bem-vindo(a) de volta.</h2>
+                <p>Faça login para continuar acessando a página</p>
             </div>
         </div>
+        <div class="login-form">
+            <div class="login-form-content">
+                <form>
+                    <img src="./public/images/Logo_Horizontal_colorida_Refatorando_1.png" width="200">
+                    <h3>Faça seu Login</h3>
+                    <input type="text" placeholder="E-mail" required>
+                    <input type="password" placeholder="Senha" required>
+                    <a href="#">Esqueci minha senha</a>
+                    <button type="submit">Entrar</button>
+                </form>
+                <div class="login-form-divider">
+                    <div>ou faça login com</div>
+                </div>
+                <a href="#" class="login-form-google">
+                    <div id="google-container">
+                        <div id="google-icon"></div>
+                        <span id="google-sign-in">Sign in with Google</span>
+                    </div>
+                </a>
+                <span class="login-form-subscribe">
+                    Não tem uma conta? <a href="#">Inscreva-se</a>
+                </span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

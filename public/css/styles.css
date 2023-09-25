@@ -1,6 +1,13 @@
 /* Import the Roboto font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;700&family=Ubuntu&display=swap');
 
+/* *,
+*:before,
+*:after {
+    outline: solid 0.5px #db6a7d;
+    border: 0;
+} */
+
 body {
     display: flex;
     justify-content: center;
@@ -24,42 +31,111 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-self: stretch;
     flex: 1;
-    padding: 20px;
     background-color: #f5f5f5;
     background-image: url("/public/images/bg.png");
-    background-position: top;
+    background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     color: #FDFDFF;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.login-text-content {
-    height: 300px;
+    transition: background-position 1s;
 }
 
 .login-text-content h2 {
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2.6rem;
     margin: 10px 0;
 }
 
 .login-text-content p {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 10px 0;
 }
 
 .login-form {
-    flex: 1;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    align-self: stretch;
+    flex: 1;
 }
 
-.login-form h2 {
-    margin-top: 0;
+.login-form-content {
+    width: 70%;
+}
+
+.login-form h3 {
+    margin-top: 50px;
+    align-self: flex-start;
+}
+
+.login-form a {
+    margin-bottom: 25px;
+    align-self: flex-end;
+    color: #2b2b2b;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    color: #00B7BC;
+}
+
+.login-form-divider {
+    align-self: stretch;
+    border-bottom: solid 1px #626476;
+    color: #626476;
+    margin-bottom: 20px;
+}
+
+.login-form-divider div{
+    width: 150px;
+    position: relative;
+    top: 10px;
+    left: calc(50% - 75px);
+    text-align: center;
+    background-color: #fff;
+}
+
+.login-form-subscribe a {
+    color: #0B9DCA;
+}
+
+.login-form-google{
+    background: white;
+    color: #000;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: solid 1px #EAEAEA;
+    display: flex;
+    align-items: center;
+    margin: 40px 0;
+}
+
+#google-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#google-icon{
+    margin: 10px;
+    display: inline;
+    width: 30px;
+    height: 30px;
+    background-image: url("/public/images/google.svg");
+    background-size: 30px;
+}
+
+#google-sign-in {
+    text-align: center;
+    justify-content: center;
 }
 
 form {
@@ -70,6 +146,7 @@ form {
 
 input {
     width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -77,14 +154,58 @@ input {
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 20px;
+    margin-bottom: 10px;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    background: linear-gradient(90deg, #0B9DCA -4.82%, #00B7BC 100.35%);
+    mix-blend-mode: normal;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    align-self: stretch;
+    
 }
 
 button:hover {
-    background-color: #0056b3;
+    background: linear-gradient(180deg, #0B9DCA -4.82%, #00B7BC 100.35%);
+}
+
+
+/* Define the animation */
+@keyframes slide {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.login-text {
+    animation: slide 90s linear forwards alternate-reverse;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-form {
+        flex: 3;
+    }
+
+    .login-form-content {
+        width: 90%;
+    }
+
+    .login-text-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .login-text-content p {
+        font-size: 1rem;
+    }
 }
