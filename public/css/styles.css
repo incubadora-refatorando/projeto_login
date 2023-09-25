@@ -34,7 +34,7 @@ body {
     align-self: stretch;
     flex: 1;
     background-color: #f5f5f5;
-    background-image: url("/public/images/bg.png");
+    background-image: url("../../public/images/bg.png");
     background-position: right;
     background-size: cover;
     background-repeat: no-repeat;
@@ -129,7 +129,7 @@ body {
     display: inline;
     width: 30px;
     height: 30px;
-    background-image: url("/public/images/google.svg");
+    background-image: url("../../public/images/google.svg");
     background-size: 30px;
 }
 
